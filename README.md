@@ -28,7 +28,9 @@ python app.py
 
 >OCR server runs at http://localhost:5000/ by default.
 
-![image](https://github.com/prasunroy/ocr/blob/master/assets/image.png)
+<br />
+
+![image](https://github.com/prasunroy/ocr/raw/master/assets/image.png)
 
 ## License
 MIT License
