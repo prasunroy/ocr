@@ -9,6 +9,11 @@ GitHub: https://github.com/prasunroy/ocr
 
 
 # imports
+import os
+
+os.environ["MKL_THREADING_LAYER"] = "GNU"
+os.environ["KERAS_BACKEND"] = "theano"
+
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout

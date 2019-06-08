@@ -324,13 +324,13 @@ def imscanC(path, bbox_color=(0, 255, 0), bbox_width=1, verbose=False):
     image_th = impreprocess(image, verbose=verbose)[-1]
     
     # find contours
-    if opencv == 2:
-        (contours, _) = cv2.findContours(image_th.copy(), cv2.RETR_EXTERNAL,
-                                         cv2.CHAIN_APPROX_NONE)
-    else:
+    if opencv == 3:
         (_, contours, _) = cv2.findContours(image_th.copy(), cv2.RETR_EXTERNAL,
                                             cv2.CHAIN_APPROX_NONE)
-    
+    else:
+        (contours, _) = cv2.findContours(image_th.copy(), cv2.RETR_EXTERNAL,
+                                         cv2.CHAIN_APPROX_NONE)
+
     # find bounding rectangle around each contour
     bn_rects = []
     for cntr in contours:
