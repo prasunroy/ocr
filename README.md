@@ -6,26 +6,28 @@
 ![badge](https://github.com/prasunroy/ocr/blob/master/assets/badge_2.svg)
 
 ## Installation
-#### Step 1: Install [Anaconda](https://www.anaconda.com/download/) distribution of python 2.7+ or 3.5+ (recommended)
+#### Step 1: Install [Anaconda](https://www.anaconda.com/distribution/)
 #### Step 2: Update Anaconda
 ```
 conda update conda
 conda update anaconda
 ```
-#### Step 3: Install dependencies
+#### Step 3: Create and activate environment
+```
+conda create -n ocr python=3.5
+conda activate ocr
+```
+#### Step 4: Install dependencies
 ```
 conda install theano
-pip install keras
-pip install opencv-python
+pip install flask h5py keras matplotlib numpy opencv-python
 ```
->To switch backend from "tensorflow" (default) to "theano" read the [Keras Documentation](https://keras.io/backend/).
-#### Step 4: Clone OCR and start server
+#### Step 5: Clone OCR and start server
 ```
 git clone https://github.com/prasunroy/ocr.git
 cd ocr
 python app.py
 ```
-
 >OCR server runs at http://localhost:5000/ by default.
 
 <br />
